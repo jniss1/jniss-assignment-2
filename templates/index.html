@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Algorithm</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>KMeans Clustering Algorithm</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="k">Number of Clusters (k):</label>
+        <input type="number" id="k" name="k" value ="2" min="2"></input><br>
+
+        <label for="init">Initilization Method:</label>
+        <select id="init" name="init">
+            <option value="Random">Random</option>
+            <option value="Farthest First">Farthest First</option>
+            <option value="KMeans++">KMeans++</option>
+            <option value="Manual">Manual</option>
+        </select><br><br>
+
+        <input type="hidden" name="button_type" value="" id="button_type">
+        <input id="b1" type="submit" name="select_type" value="step_through">Step Through Kmeans</input><br>
+        <input id="b2" type="submit" name="select_type" value="converge">Run to Convergence</input><br>
+        <input id="b3" type="submit" name="select_type" value="new_data">Generate New Dataset</input><br>
+        <input id="b4" type="submit" name="select_type" value="reset">Reset Algorithm</input><br>
+
+    </form>
+
+    <h2>KMeans Clustering Graph</h2>
+    <div id="graphContainer">
+        <img id="compressedImage" alt="Compressed Image" style="display:none;">
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
+<script>
+    //alert("GonGon")
+    let button_type = document.getElementById("button_type")
+    document.getElementById("b1").addEventListener("click",()=>{button_type.value="step_through"})
+    document.getElementById("b2").addEventListener("click",()=>{button_type.value="converge"})
+    document.getElementById("b3").addEventListener("click",()=>{button_type.value="new_data"})
+    document.getElementById("b4").addEventListener("click",()=>{button_type.value="reset"})
+    btn.addEventListener("click",()=>{
+        alert("Ook ook")
+        btn.innerText = `${btn.innerText} AiAi`
+    })
+</script>
